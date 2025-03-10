@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+ 
+       .nav-custom {
+            background-color: lightseagreen;
+            color: white;
+        }
+        .nav-custom .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+        .nav-custom .nav-link:hover {
+            color: gold !important;
+        }
+        .nav-custom .contact-btn {
+            color: gold !important;
+            border: 1px solid gold;
+            border-radius: 10px;
+        }
+        .nav-custom .contact-btn:hover {
+            background-color: gold;
+            color: lightseagreen !important;
+        }
+
+      .header {
+        background: linear-gradient(
+          -8deg,
+          rgb(245, 244, 244) 33%,
+          rgb(5, 129, 123) 20%
+        );
+        color: white;
+        padding: 40px 0;
+      }
+
+      .pp {
+        background-image: url(../html/assets/images/working-girl.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .y1 {
+        font-size: 30px;
+        text-align: center;
+      }
+
+     
+      .phone {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .phone svg {
+        margin-right: 8px;
+      }
+
+      .photo {
+        background-image: url(../html/assets/images/imp.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        .photo {
+          height: 30vh;
+          width: 80vw;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .photo {
+          height: 25vh;
+          width: 90vw;
+        }
+      }
+
+      .middle1 {
+      
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(223, 242, 250);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .middle2 {
+        display: flex;
+        gap: 30px;
+        transition: transform 1s ease;
+      }
+
+      .item {
+        border: 1px solid;
+        height: 50vh;
+        width: 300%;
+
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .item1 {
+        background-image: url(./assets/images/project-image01.jpg);
+      }
+
+      .item2 {
+        background-image: url(./assets/images/project-image02.jpg);
+      }
+
+      .item3 {
+        background-image: url(./assets/images/project-image03\ \(1\).jpg);
+      }
+
+      .item4 {
+        background-image: url(./assets/images/project-image04.jpg);
+      }
+
+      .item5 {
+        background-image: url(./assets/images/project-image05.jpg);
+      }
+
+      .w1 {
+        font-size: 20px;
+        display: flex;
+      }
+
+      @media screen and (max-width: 768px) {
+        .item {
+          height: 40vh;
+          max-width: 100vw;
+        }
+      }
+      .middle3 {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .m1 img {
+        max-width: 100%;
+        height: auto;
+      }
+      .m2 p:first-child {
+        font-weight: bold;
+      }
+
+      
+
+
+
+
+     
+     
+      @media screen and (min-width: 1024px) {
+        .last {
+          padding: 40px;
+          gap: 40px;
+        }
+
+        .p1 {
+          font-size: 2.5rem;
+        }
+      }
+      
+      .v5 {
+    text-align: center; 
+    padding: 20px;
+  }
+
+  .responsive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:white;
+    color:lightseagreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Makes the button take up full width on small screens */
+    max-width: 300px; /* Limits the button width on larger screens */
+    box-sizing: border-box;
+  }
+
+  .responsive-button:hover {
+    background-color: lightseagreen; 
+    color: white;/* Darker shade on hover */
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .responsive-button {
+      font-size: 14px; /* Smaller font size for smaller screens */
+      padding: 12px 15px;
+    }
+  }
+
+
+
+        .last {
+      border: 1px solid black;
+      background-color: black;
+    }
+
+    .grid-item {
+      padding: 20px;
+      text-align: center;
+      height: 150px;
+      color: white;
+      background-color: black;
+    }
+
+    /* Custom Styles for Social Media Icons */
+    .social-icons a {
+      color: white; /* Set icon color to white */
+      font-size: 30px; /* Adjust size of the icons */
+      margin-right: 15px; /* Space between icons */
+      text-decoration: none; /* Remove underline from links */
+    }
+
+    /* Hover effect for icons */
+    .social-icons a:hover {
+      color: #ccc; /* Light grey hover effect */
+    }
+
+
+    .col-md-4.grid-item.fs-6:hover {
+  color: gold; /* Change text color to gold */
+
+}
+    </style>
+  </head>
+  <body>
+    <!-- Bootstrap JS -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg nav-custom">
+  <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="./assets/images/trending (1).png" alt="Logo" height="40">
+          <h2 class="mb-0" style="color: white;">Digital Trend</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+              <li class="nav-item"><a class="nav-link" href="#">Studio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Our Work</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link contact-btn" href="#">Contact</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+    <!-- Bootstrap JS -->
+   
+
+    <div class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <div class="y1">We are ready for your <br />digital marketing</div>
+            <div class="v5">
+              <button class="responsive-button">Let us discuss together!</button>
+            </div>
+            <p class="phone">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                height="16px"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z"
+                    fill="#edeef2"
+                  ></path>
+                </g>
+              </svg>
+              +99 080 070 4224
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="pp" style="height: 50vh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center border"
+    >
+      <div class="mb-4 text-center">
+        <h1>
+          The best <span class="text-warning">Digital Marketing</span><br />
+          <span class="text-warning">agency</span> in Rio de Janeiro
+        </h1>
+        <p class="fs-5">
+          Total 5 HTML pages are included in this template from templateMo
+          website.<br />
+          Please check 2 blog pages, project page, and contact page.
+        </p>
+        <p class="fs-5">
+          You are <span class="text-warning">allowed</span> to use this template
+          for commercial or non-commercial<br />
+          purposes. You are NOT allowed to redistribute the template ZIP file
+          on<br />
+          template collection websites.
+        </p>
+      </div>
+      <div class="photo" style="height: 50vh; width: 50vw"></div>
+    </div>
+
+    <div class="middle1">
+      <div class="w1">
+        <h1>
+          Please take a look <br />through our
+          <span style="color: gold">featured <br />Digital Trends</span>
+        </h1>
+      </div>
+      <div class="middle2">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+      </div>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+
+      function slideImages() {
+        const slides = document.querySelector(".middle2");
+        const totalSlides = slides.children.length;
+        const slideWidth = slides.children[0].offsetWidth;
+
+        // Move to the next slide
+        currentIndex = (currentIndex + 1) % totalSlides;
+        slides.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+      }
+
+      // Set interval to slide images every 3 seconds
+      setInterval(slideImages, 3000);
+    </script>
+    <div class="container middle3">
+      <div class="row align-items-center">
+        <!-- Avatar Section -->
+        <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+          <img
+            src="./assets/images/female-avatar.png"
+            alt="Female Avatar"
+            class="img-fluid"
+            style="max-height: 450px"
+          />
+        </div>
+        <!-- Testimonial Section -->
+        <div class="col-12 col-md-6">
+          <p>CLIENT TESTIMONIALS</p>
+          <h1>
+            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt
+            mollit id et sit proident dolor nulla sed commodo.
+          </h1>
+          <p>
+            <span style="color: gold; font-size: large">Mary Zoe</span> /
+            Digital Agency (CEO)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+  <div class="last">
+    <div class="container mt-4">
+      <!-- Grid Container -->
+      <div class="row g-4 mb-4">
+        <!-- Row 1 -->
+        <div class="col-md-4 grid-item fs-3">
+            We make creative <p style="color: gold;">brands only.</p>
+          </div>
+          
+        <div class="col-md-4 grid-item fs-6">
+          CONTACT INFO
+          <br>
+          +99 080 070 4224
+          <br>
+          hello@company.com
+        </div>
+        <div class="col-md-4 grid-item fs-6">
+          OUR STUDIO
+          <br>
+          Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Row 2 -->
+        <div class="col-md-4 grid-item fs-6">
+          Copyright © 2020 Your Company
+          <br>
+          Design: TemplateMo
+        </div>
+        <div class="col-md-4 grid-item fs-6">
+          Stories
+          <br>
+          Work with us
+          <br>
+          Privacy
+        </div>
+        <div class="col-md-4 grid-item social-icons">
+          <!-- Social Media Icons -->
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://www.whatsapp.com" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     
+  </body>
+</html>
